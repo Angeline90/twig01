@@ -1,3 +1,4 @@
+{# ---VERSION QUÊTE 1---
 <!doctype html>
 <html lang="fr">
 <head>
@@ -18,4 +19,21 @@
         {{ dump(products) }}
     </p>
 </body>
-</html>
+</html> #}
+
+{# ---VERSION QUÊTE 2--- #}
+
+{% extends 'layout.html.twig' %}
+{% block title %}
+    {{ parent() }} - Instruments
+{% endblock %}
+{% block content %}    
+    <h1>Instruments</h1>
+    <p> Voici une liste d'instruments : 
+        <ul> {% for product in products %}
+            <li>{{ product }}<li>
+            {% endfor %}
+        </ul>
+        {{ dump(products) }}
+    </p> 
+    {% endblock %}
